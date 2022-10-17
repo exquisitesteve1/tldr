@@ -11,7 +11,7 @@
 
 - Create a distrobox using the Ubuntu Linux image:
 
-`distrobox-create {{container_name}} --image ubuntu:latest`
+`distrobox-create {{container_name}} --image {{ubuntu:latest}}`
 
 - List all distrobox containers with verbose information:
 
@@ -27,19 +27,19 @@
 
 - Export an app (atom) from the container to the host (will show up in your host system's application list):
 
-`distrobox-export --app atom --extra-flags "--foreground"`
+`distrobox-export --app {{atom}} --extra-flags "--foreground"`
 
 - Export a binary(ranger) from the container to the host:
 
-`distrobox-export --bin /usr/bin/ranger --export-path $HOME/.local/bin`
+`distrobox-export --bin {{/usr/bin/ranger}} --export-path {{$HOME/.local/bin}}`
 
 - Export a service (syncthing) from container to the host (`--sudo` will run the service as root inside the container):
 
-`distrobox-export --service syncthing --extra-flags "--allow-newer-config" --sudo`
+`distrobox-export --service {{syncthing}} --extra-flags "--allow-newer-config" --sudo`
 
 - Unexport/delete an exported app (atom)
 
-`distrobox-export --app atom --delete`
+`distrobox-export --app {{atom}} --delete`
 
 - Upgrade a container using the container's package manager:
 
